@@ -1,12 +1,12 @@
 from django.core.management.base import BaseCommand
-import time 
+import time
 
 from psycopg2 import OperationalError as Psycopg2OperationalError
 
 from django.db.utils import OperationalError as DjangoOperationalError
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand # noqa
 
-class Command(BaseCommand):
+class Command(BaseCommand): # noqa
     """Django command to pause execution until database is available"""
 
     def handle(self, *args, **options):
