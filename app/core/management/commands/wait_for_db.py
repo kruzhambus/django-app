@@ -14,7 +14,7 @@ class Command(BaseCommand): # noqa
         db_conn = False
         while db_conn is False:
             try:
-                self.check(database=['default'])
+                self.check(databases=['default'])
                 db_conn = True
             except (Psycopg2OperationalError, DjangoOperationalError):
                 self.stdout.write('Database unavailable, waiting 1 second...')
